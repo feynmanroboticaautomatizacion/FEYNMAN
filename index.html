@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FEYNMAN Ingeniería y Automatización</title>
+
+<!-- =========================
+     ESTILOS GENERALES
+========================= -->
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#0f172a;
+color:white;
+}
+
+header{
+background:#0b1120;
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header img{
+height:50px;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#1f4fff;
+}
+
+.hero{
+padding:100px 10%;
+text-align:center;
+background:linear-gradient(to right,#0f172a,#1e293b);
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+color:#cbd5e1;
+}
+
+.hero button{
+margin-top:30px;
+padding:15px 30px;
+background:#1f4fff;
+border:none;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:8px;
+}
+
+.card h3{
+color:#1f4fff;
+}
+
+footer{
+background:#0b1120;
+padding:40px 10%;
+text-align:center;
+color:#aaa;
+}
+
+input, textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:none;
+border-radius:6px;
+}
+
+button{
+cursor:pointer;
+}
+
+.whatsapp-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+<header>
+<img src="logo.png" alt="Logo Feynman">
+<nav>
+<a href="#servicios">Servicios</a>
+<a href="#industrias">Industrias</a>
+<a href="#contacto">Cotización</a>
+</nav>
+</header>
+
+<!-- =========================
+     HERO PRINCIPAL
+========================= -->
+<section class="hero">
+<h1>Ingeniería y Automatización Industrial</h1>
+<p>Soluciones integrales en diseño mecánico, programación PLC y robótica industrial.</p>
+<a href="#contacto">
+<button>Solicita tu Cotización</button>
+</a>
+</section>
+
+<!-- =========================
+     SERVICIOS
+========================= -->
+<section id="servicios">
+<div class="section-title">
+<h2>Nuestros Servicios</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Diseño Mecánico</h3>
+<p>Diseño y desarrollo de maquinaria, dispositivos y soluciones industriales.</p>
+</div>
+
+<div class="card">
+<h3>Automatización</h3>
+<p>Integración de sistemas automatizados para optimizar procesos productivos.</p>
+</div>
+
+<div class="card">
+<h3>Programación PLC</h3>
+<p>Desarrollo y puesta en marcha de sistemas de control industrial.</p>
+</div>
+
+<div class="card">
+<h3>Robótica Industrial</h3>
+<p>Integración y programación de robots para líneas de producción.</p>
+</div>
+
+</div>
+</section>
+
+<!-- =========================
+     INDUSTRIAS
+========================= -->
+<section id="industrias" style="background:#1e293b;">
+<div class="section-title">
+<h2>Industrias Atendidas</h2>
+</div>
+
+<div class="cards">
+<div class="card">
+<h3>Automotriz</h3>
+<p>Experiencia en integración y mejora de procesos industriales.</p>
+</div>
+
+<div class="card">
+<h3>Alimentaria</h3>
+<p>Automatización de líneas y sistemas productivos.</p>
+</div>
+
+<div class="card">
+<h3>Manufactura General</h3>
+<p>Soluciones personalizadas para optimización industrial.</p>
+</div>
+</div>
+</section>
+
+<!-- =========================
+     SECCIÓN COTIZACIÓN
+========================= -->
+<section id="contacto">
+<div class="section-title">
+<h2>Solicita tu Cotización</h2>
+<p>Déjanos tus datos y nos pondremos en contacto contigo.</p>
+</div>
+
+<div style="max-width:600px;margin:auto;">
+
+<!-- REEMPLAZA EL LINK DE FORMSPREE -->
+<form action="https://formspree.io/f/xxxxxxxx" method="POST">
+
+<input type="text" name="nombre" placeholder="Nombre completo" required>
+<input type="text" name="empresa" placeholder="Empresa">
+<input type="email" name="email" placeholder="Correo electrónico" required>
+<input type="tel" name="telefono" placeholder="Teléfono">
+<textarea name="mensaje" placeholder="Describe tu proyecto" required></textarea>
+
+<button type="submit" style="background:#1f4fff;color:white;font-weight:bold;">
+Enviar Solicitud
+</button>
+
+</form>
+</div>
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer>
+<p>FEYNMAN Ingeniería y Automatización</p>
+<p>Operando en Tlaxcala, Puebla y CDMX</p>
+<p>© 2019 - 2026 Todos los derechos reservados</p>
+</footer>
+
+<!-- =========================
+     BOTÓN FLOTANTE WHATSAPP
+     CAMBIA EL NÚMERO
+========================= -->
+<a class="whatsapp-btn"
+href="https://wa.me/521XXXXXXXXXX"
+target="_blank">
+WhatsApp
+</a>
+
+</body>
+</html>
