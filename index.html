@@ -7,13 +7,13 @@
 
 <!-- =========================
      VARIABLES DE DISEÑO
-     Cambia aquí colores globales
+     CAMBIA LOS COLORES AQUÍ
 ========================= -->
 <style>
 :root{
---azul:#0056ff;
---oscuro:#0c0f17;
---gris:#9ca3af;
+--azul:#0056ff;        /* COLOR PRINCIPAL */
+--oscuro:#0c0f17;      /* FONDO GENERAL */
+--gris:#9ca3af;        /* TEXTO SECUNDARIO */
 --blanco:#ffffff;
 }
 
@@ -21,7 +21,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: 'Segoe UI', sans-serif;
+font-family:'Segoe UI', sans-serif;
 }
 
 body{
@@ -43,7 +43,7 @@ backdrop-filter: blur(6px);
 }
 
 header img{
-height:85px; /* CAMBIA tamaño logo */
+height:55px; /* CAMBIA TAMAÑO DEL LOGO AQUÍ */
 }
 
 nav a{
@@ -62,7 +62,9 @@ color:var(--azul);
 height:100vh;
 
 /* CAMBIA IMAGEN DE FONDO AQUÍ */
-background-image:url("images/industrial.jpg");
+background:
+linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+url("images/industrial.jpg");
 
 background-size:cover;
 background-position:center;
@@ -72,7 +74,7 @@ padding:0 8%;
 }
 
 .hero-content{
-max-width:600px;
+max-width:650px;
 }
 
 .hero h1{
@@ -84,6 +86,7 @@ margin-bottom:20px;
 color:var(--gris);
 margin-bottom:30px;
 line-height:1.6;
+font-size:18px;
 }
 
 .btn{
@@ -93,6 +96,11 @@ color:white;
 text-decoration:none;
 border-radius:6px;
 font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#003bb5;
 }
 
 /* ================= SECCIONES ================= */
@@ -105,7 +113,7 @@ font-size:36px;
 margin-bottom:60px;
 }
 
-/* ================= GRID SERVICIOS ================= */
+/* ================= GRID ================= */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -121,6 +129,7 @@ transition:0.4s;
 
 .card:hover{
 transform:translateY(-10px);
+background:#1b2130;
 }
 
 /* ================= CTA ================= */
@@ -155,8 +164,9 @@ color:var(--gris);
 
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
-<img src="images/logo.png">
+<img src="images/logo.png"> <!-- LOGO AQUÍ -->
 <nav>
 <a href="#nosotros">Nosotros</a>
 <a href="servicios.html">Servicios</a>
@@ -169,7 +179,9 @@ color:var(--gris);
 <section class="hero">
 <div class="hero-content">
 <h1>Soluciones Avanzadas de Automatización Industrial</h1>
-<p>Integramos tecnología, ingeniería y precisión para optimizar procesos productivos en la industria mexicana.</p>
+<p>
+Integramos tecnología, ingeniería y precisión para optimizar procesos productivos en la industria mexicana.
+</p>
 <a href="servicios.html" class="btn">Explorar Servicios</a>
 </div>
 </section>
@@ -178,7 +190,8 @@ color:var(--gris);
 <section id="nosotros">
 <h2 class="section-title">Quiénes Somos</h2>
 <p style="max-width:800px; line-height:1.8; color:var(--gris);">
-Empresa mexicana fundada en 2019 especializada en diseño mecánico, automatización industrial y programación de PLC y robots industriales.
+Empresa mexicana fundada en 2019 especializada en diseño mecánico, automatización industrial,
+programación de PLC y robótica industrial.
 </p>
 </section>
 
@@ -188,15 +201,17 @@ Empresa mexicana fundada en 2019 especializada en diseño mecánico, automatizac
 <div class="grid">
 <div class="card">
 <h3>Automatización Industrial</h3>
-<p>Integración de PLC, HMI y sistemas de control.</p>
+<p>Integración de PLC, HMI y sistemas de control industrial.</p>
 </div>
+
 <div class="card">
 <h3>Robótica Industrial</h3>
-<p>Programación y puesta en marcha de robots.</p>
+<p>Programación, integración y puesta en marcha de robots industriales.</p>
 </div>
+
 <div class="card">
 <h3>Diseño Mecánico</h3>
-<p>Desarrollo de maquinaria y modelado 3D.</p>
+<p>Desarrollo de maquinaria especial y modelado 3D.</p>
 </div>
 </div>
 </section>
@@ -215,11 +230,14 @@ Empresa mexicana fundada en 2019 especializada en diseño mecánico, automatizac
 <!-- ================= CTA ================= -->
 <section class="cta">
 <h2>Impulsa tu producción con ingeniería de precisión</h2>
-<a href="#">Solicitar Cotización</a>
+<a href="#contacto">Solicitar Cotización</a>
 </section>
 
+<!-- ================= FOOTER ================= -->
 <footer id="contacto">
-<p>Feynman Ingeniería Industrial | Tlaxcala · Puebla · CDMX</p>
+<p>Feynman Ingeniería Industrial</p>
+<p>Tlaxcala · Puebla · CDMX</p>
+<p>contacto@feynmaningenieria.com</p>
 <p>© 2026 Todos los derechos reservados</p>
 </footer>
 
