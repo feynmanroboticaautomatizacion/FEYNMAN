@@ -3,259 +3,225 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FEYNMAN Robótica y Automatización</title>
+<title>Feynman Ingeniería Industrial</title>
 
 <!-- =========================
-     ESTILOS GENERALES
+     VARIABLES DE DISEÑO
+     Cambia aquí colores globales
 ========================= -->
 <style>
-
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#0f172a;
-color:white;
+:root{
+--azul:#0056ff;
+--oscuro:#0c0f17;
+--gris:#9ca3af;
+--blanco:#ffffff;
 }
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+background:var(--oscuro);
+color:var(--blanco);
+}
+
+/* ================= HEADER ================= */
 header{
-background:#0b1120;
-padding:20px 10%;
+position:fixed;
+width:100%;
+background:rgba(12,15,23,0.9);
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:20px 8%;
+z-index:1000;
+backdrop-filter: blur(6px);
 }
 
 header img{
-height:80px;
+height:85px; /* CAMBIA tamaño logo */
 }
 
 nav a{
 color:white;
-margin-left:20px;
+margin-left:30px;
 text-decoration:none;
-font-weight:bold;
+font-weight:500;
 }
 
 nav a:hover{
-color:#1f4fff;
+color:var(--azul);
 }
 
+/* ================= HERO ================= */
 .hero{
-padding:100px 10%;
-text-align:center;
-background:linear-gradient(to right,#0f172a,#1e293b);
+height:100vh;
+
+/* CAMBIA IMAGEN DE FONDO AQUÍ */
+background-image:url("images/industrial.jpg");
+
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:0 8%;
+}
+
+.hero-content{
+max-width:600px;
 }
 
 .hero h1{
-font-size:42px;
+font-size:52px;
 margin-bottom:20px;
 }
 
 .hero p{
-font-size:18px;
-color:#cbd5e1;
+color:var(--gris);
+margin-bottom:30px;
+line-height:1.6;
 }
 
-.hero button{
-margin-top:30px;
+.btn{
 padding:15px 30px;
-background:#1f4fff;
-border:none;
+background:var(--azul);
 color:white;
-font-size:16px;
-border-radius:6px;
-cursor:pointer;
-}
-
-section{
-padding:80px 10%;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:50px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-.card{
-background:#1e293b;
-padding:25px;
-border-radius:8px;
-}
-
-.card h3{
-color:#1f4fff;
-}
-
-footer{
-background:#0b1120;
-padding:40px 10%;
-text-align:center;
-color:#aaa;
-}
-
-input, textarea{
-width:100%;
-padding:12px;
-margin-bottom:15px;
-border:none;
-border-radius:6px;
-}
-
-button{
-cursor:pointer;
-}
-
-.whatsapp-btn{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:50px;
 text-decoration:none;
+border-radius:6px;
 font-weight:bold;
 }
 
+/* ================= SECCIONES ================= */
+section{
+padding:120px 8%;
+}
+
+.section-title{
+font-size:36px;
+margin-bottom:60px;
+}
+
+/* ================= GRID SERVICIOS ================= */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
+}
+
+.card{
+background:#141824;
+padding:40px;
+border-radius:8px;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+/* ================= CTA ================= */
+.cta{
+background:var(--azul);
+text-align:center;
+padding:100px 8%;
+}
+
+.cta h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.cta a{
+background:white;
+color:black;
+padding:15px 30px;
+text-decoration:none;
+font-weight:bold;
+border-radius:6px;
+}
+
+/* ================= FOOTER ================= */
+footer{
+background:black;
+padding:60px 8%;
+color:var(--gris);
+}
 </style>
 </head>
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
 <header>
-<img src="logo.png" alt="Logo Feynman">
+<img src="images/logo.png">
 <nav>
-<a href="#servicios">Servicios</a>
+<a href="#nosotros">Nosotros</a>
+<a href="servicios.html">Servicios</a>
 <a href="#industrias">Industrias</a>
-<a href="#contacto">Cotización</a>
+<a href="#contacto">Contacto</a>
 </nav>
 </header>
 
-<!-- =========================
-     HERO PRINCIPAL
-========================= -->
+<!-- ================= HERO ================= -->
 <section class="hero">
-<h1>Robótica y Automatización</h1>
-<p>Soluciones integrales en diseño mecánico, programación PLC y robótica industrial.</p>
-<a href="#contacto">
-<button>Solicita tu Cotización</button>
-</a>
+<div class="hero-content">
+<h1>Soluciones Avanzadas de Automatización Industrial</h1>
+<p>Integramos tecnología, ingeniería y precisión para optimizar procesos productivos en la industria mexicana.</p>
+<a href="servicios.html" class="btn">Explorar Servicios</a>
+</div>
 </section>
 
-<!-- =========================
-     SERVICIOS
-========================= -->
-<section id="servicios">
-<div class="section-title">
-<h2>Nuestros Servicios</h2>
-</div>
+<!-- ================= NOSOTROS ================= -->
+<section id="nosotros">
+<h2 class="section-title">Quiénes Somos</h2>
+<p style="max-width:800px; line-height:1.8; color:var(--gris);">
+Empresa mexicana fundada en 2019 especializada en diseño mecánico, automatización industrial y programación de PLC y robots industriales.
+</p>
+</section>
 
-<div class="cards">
-
+<!-- ================= SERVICIOS ================= -->
+<section>
+<h2 class="section-title">Servicios</h2>
+<div class="grid">
 <div class="card">
-<h3>Diseño Mecánico</h3>
-<p>Diseño y desarrollo de maquinaria, dispositivos y soluciones industriales.</p>
+<h3>Automatización Industrial</h3>
+<p>Integración de PLC, HMI y sistemas de control.</p>
 </div>
-
-<div class="card">
-<h3>Automatización</h3>
-<p>Integración de sistemas automatizados para optimizar procesos productivos.</p>
-</div>
-
-<div class="card">
-<h3>Programación PLC</h3>
-<p>Desarrollo y puesta en marcha de sistemas de control industrial.</p>
-</div>
-
 <div class="card">
 <h3>Robótica Industrial</h3>
-<p>Integración y programación de robots para líneas de producción.</p>
+<p>Programación y puesta en marcha de robots.</p>
 </div>
-
-</div>
-</section>
-
-<!-- =========================
-     INDUSTRIAS
-========================= -->
-<section id="industrias" style="background:#1e293b;">
-<div class="section-title">
-<h2>Industrias Atendidas</h2>
-</div>
-
-<div class="cards">
 <div class="card">
-<h3>Automotriz</h3>
-<p>Experiencia en integración y mejora de procesos industriales.</p>
-</div>
-
-<div class="card">
-<h3>Alimentaria</h3>
-<p>Automatización de líneas y sistemas productivos.</p>
-</div>
-
-<div class="card">
-<h3>Manufactura General</h3>
-<p>Soluciones personalizadas para optimización industrial.</p>
+<h3>Diseño Mecánico</h3>
+<p>Desarrollo de maquinaria y modelado 3D.</p>
 </div>
 </div>
 </section>
 
-<!-- =========================
-     SECCIÓN COTIZACIÓN
-========================= -->
-<section id="contacto">
-<div class="section-title">
-<h2>Solicita tu Cotización</h2>
-<p>Déjanos tus datos y nos pondremos en contacto contigo.</p>
-</div>
-
-<div style="max-width:600px;margin:auto;">
-
-<!-- REEMPLAZA EL LINK DE FORMSPREE -->
-<form action="https://formspree.io/f/xxxxxxxx" method="POST">
-
-<input type="text" name="nombre" placeholder="Nombre completo" required>
-<input type="text" name="empresa" placeholder="Empresa">
-<input type="email" name="email" placeholder="Correo electrónico" required>
-<input type="tel" name="telefono" placeholder="Teléfono">
-<textarea name="mensaje" placeholder="Describe tu proyecto" required></textarea>
-
-<button type="submit" style="background:#1f4fff;color:white;font-weight:bold;">
-Enviar Solicitud
-</button>
-
-</form>
+<!-- ================= INDUSTRIAS ================= -->
+<section id="industrias">
+<h2 class="section-title">Industrias Atendidas</h2>
+<div class="grid">
+<div class="card">Automotriz</div>
+<div class="card">Farmacéutica</div>
+<div class="card">Textil</div>
+<div class="card">Manufactura</div>
 </div>
 </section>
 
-<!-- =========================
-     FOOTER
-========================= -->
-<footer>
-<p>Robótica y Automatización</p>
-<p>Operando en Tlaxcala, Puebla y CDMX</p>
-<p>© 2019 - 2026 Todos los derechos reservados</p>
+<!-- ================= CTA ================= -->
+<section class="cta">
+<h2>Impulsa tu producción con ingeniería de precisión</h2>
+<a href="#">Solicitar Cotización</a>
+</section>
+
+<footer id="contacto">
+<p>Feynman Ingeniería Industrial | Tlaxcala · Puebla · CDMX</p>
+<p>© 2026 Todos los derechos reservados</p>
 </footer>
-
-<!-- =========================
-     BOTÓN FLOTANTE WHATSAPP
-     CAMBIA EL NÚMERO
-========================= -->
-<a class="whatsapp-btn"
-href="https://wa.me/521XXXXXXXXXX"
-target="_blank">
-WhatsApp
-</a>
 
 </body>
 </html>
