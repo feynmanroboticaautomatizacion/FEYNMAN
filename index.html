@@ -5,15 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Feynman Ingeniería Industrial</title>
 
-<!-- =========================
-     VARIABLES DE DISEÑO
-     CAMBIA LOS COLORES AQUÍ
-========================= -->
 <style>
 :root{
---azul:#0c0c9d;        /* COLOR PRINCIPAL */
---oscuro:#0c0f17;      /* FONDO GENERAL */
---gris:#9ca3af;        /* TEXTO SECUNDARIO */
+--azul:#0c0c9d;
+--oscuro:#0c0f17;
+--gris:#9ca3af;
 --blanco:#ffffff;
 }
 
@@ -29,7 +25,7 @@ background:var(--oscuro);
 color:var(--blanco);
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 header{
 position:fixed;
 width:100%;
@@ -43,7 +39,7 @@ backdrop-filter: blur(6px);
 }
 
 header img{
-height:65px; /* CAMBIA TAMAÑO DEL LOGO AQUÍ */
+height:65px;
 }
 
 nav a{
@@ -57,15 +53,12 @@ nav a:hover{
 color:var(--azul);
 }
 
-/* ================= HERO ================= */
+/* HERO */
 .hero{
 height:100vh;
-
-/* CAMBIA IMAGEN DE FONDO AQUÍ */
 background:
 linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
 url("images/industrial.jpg");
-
 background-size:cover;
 background-position:center;
 display:flex;
@@ -97,13 +90,15 @@ text-decoration:none;
 border-radius:6px;
 font-weight:bold;
 transition:0.3s;
+border:none;
+cursor:pointer;
 }
 
 .btn:hover{
 background:#003bb5;
 }
 
-/* ================= SECCIONES ================= */
+/* SECCIONES */
 section{
 padding:120px 8%;
 }
@@ -113,7 +108,7 @@ font-size:36px;
 margin-bottom:60px;
 }
 
-/* ================= GRID ================= */
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -132,7 +127,7 @@ transform:translateY(-10px);
 background:#1b2130;
 }
 
-/* ================= CTA ================= */
+/* CTA */
 .cta{
 background:var(--azul);
 text-align:center;
@@ -153,20 +148,42 @@ font-weight:bold;
 border-radius:6px;
 }
 
-/* ================= FOOTER ================= */
+/* CONTACTO */
+.contact-form{
+max-width:600px;
+margin-top:40px;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border:none;
+border-radius:6px;
+background:#1b2130;
+color:white;
+}
+
+.contact-form textarea{
+height:150px;
+resize:none;
+}
+
+/* FOOTER */
 footer{
 background:black;
 padding:60px 8%;
 color:var(--gris);
+text-align:center;
 }
 </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
 <header>
-<img src="images/logo.png"> <!-- LOGO AQUÍ -->
+<img src="images/logo.png">
 <nav>
 <a href="#nosotros">Nosotros</a>
 <a href="servicios.html">Servicios</a>
@@ -175,7 +192,6 @@ color:var(--gris);
 </nav>
 </header>
 
-<!-- ================= HERO ================= -->
 <section class="hero">
 <div class="hero-content">
 <h1>Soluciones Avanzadas de Automatización Industrial</h1>
@@ -186,7 +202,6 @@ Integramos tecnología, ingeniería y precisión para optimizar procesos product
 </div>
 </section>
 
-<!-- ================= NOSOTROS ================= -->
 <section id="nosotros">
 <h2 class="section-title">Quiénes Somos</h2>
 <p style="max-width:800px; line-height:1.8; color:var(--gris);">
@@ -195,7 +210,6 @@ programación de PLC y robótica industrial.
 </p>
 </section>
 
-<!-- ================= SERVICIOS ================= -->
 <section>
 <h2 class="section-title">Servicios</h2>
 <div class="grid">
@@ -216,7 +230,6 @@ programación de PLC y robótica industrial.
 </div>
 </section>
 
-<!-- ================= INDUSTRIAS ================= -->
 <section id="industrias">
 <h2 class="section-title">Industrias Atendidas</h2>
 <div class="grid">
@@ -227,19 +240,50 @@ programación de PLC y robótica industrial.
 </div>
 </section>
 
-<!-- ================= CTA ================= -->
 <section class="cta">
 <h2>Impulsa tu producción con ingeniería de precisión</h2>
 <a href="#contacto">Solicitar Cotización</a>
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer id="contacto">
+<!-- CONTACTO CON FORMULARIO FUNCIONAL -->
+<section id="contacto">
+<h2 class="section-title">Solicitar Cotización</h2>
+
+<form action="https://formspree.io/f/https://formspree.io/f/xkovylzn" method="POST" class="contact-form">
+
+<input type="text" name="nombre" placeholder="Nombre" required>
+<input type="email" name="email" placeholder="Correo electrónico" required>
+<textarea name="mensaje" placeholder="Describe tu proyecto" required></textarea>
+
+<button type="submit" class="btn">Enviar Solicitud</button>
+
+</form>
+</section>
+
+<footer>
 <p>Feynman Ingeniería Industrial</p>
 <p>Tlaxcala · Puebla · CDMX</p>
 <p>contacto@feynmaningenieria.com</p>
 <p>© 2026 Todos los derechos reservados</p>
 </footer>
+
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<a href="https://wa.me/5212461423674"
+style="
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+font-size:20px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+z-index:999;
+">
+💬
+</a>
 
 </body>
 </html>
