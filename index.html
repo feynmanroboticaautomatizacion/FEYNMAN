@@ -3,13 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Feynman Ingeniería Industrial</title>
+
+<!-- =========================
+     CAMBIAR NOMBRE DE LA PESTAÑA AQUÍ
+========================= -->
+<title>Feynman Robótica y Automatización Industrial</title>
 
 <style>
+
+/* =========================
+   COLORES PRINCIPALES
+   CAMBIA LOS COLORES AQUÍ
+========================= */
 :root{
---azul:#0c0c9d;
---oscuro:#0c0f17;
---gris:#9ca3af;
+--azul:#0c0c9d;        /* Color principal */
+--oscuro:#0c0f17;      /* Fondo general */
+--gris:#9ca3af;        /* Texto secundario */
 --blanco:#ffffff;
 }
 
@@ -25,7 +34,7 @@ background:var(--oscuro);
 color:var(--blanco);
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 header{
 position:fixed;
 width:100%;
@@ -38,6 +47,7 @@ z-index:1000;
 backdrop-filter: blur(6px);
 }
 
+/* ==== CAMBIAR TAMAÑO DEL LOGO AQUÍ ==== */
 header img{
 height:65px;
 }
@@ -53,12 +63,14 @@ nav a:hover{
 color:var(--azul);
 }
 
-/* HERO */
+/* ================= HERO ================= */
+/* ==== CAMBIAR IMAGEN DE FONDO AQUÍ ==== */
 .hero{
 height:100vh;
 background:
 linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
 url("images/industrial.jpg");
+
 background-size:cover;
 background-position:center;
 display:flex;
@@ -70,6 +82,7 @@ padding:0 8%;
 max-width:650px;
 }
 
+/* ==== CAMBIAR TITULO PRINCIPAL AQUÍ ==== */
 .hero h1{
 font-size:52px;
 margin-bottom:20px;
@@ -98,7 +111,7 @@ cursor:pointer;
 background:#003bb5;
 }
 
-/* SECCIONES */
+/* ================= SECCIONES ================= */
 section{
 padding:120px 8%;
 }
@@ -108,7 +121,7 @@ font-size:36px;
 margin-bottom:60px;
 }
 
-/* GRID */
+/* ================= GRID ================= */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -127,28 +140,14 @@ transform:translateY(-10px);
 background:#1b2130;
 }
 
-/* CTA */
+/* ================= CTA ================= */
 .cta{
 background:var(--azul);
 text-align:center;
 padding:100px 8%;
 }
 
-.cta h2{
-font-size:40px;
-margin-bottom:20px;
-}
-
-.cta a{
-background:white;
-color:black;
-padding:15px 30px;
-text-decoration:none;
-font-weight:bold;
-border-radius:6px;
-}
-
-/* CONTACTO */
+/* ================= CONTACTO ================= */
 .contact-form{
 max-width:600px;
 margin-top:40px;
@@ -170,20 +169,56 @@ height:150px;
 resize:none;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer{
 background:black;
 padding:60px 8%;
 color:var(--gris);
 text-align:center;
 }
+
+/* ================= WHATSAPP ================= */
+.whatsapp-btn{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+z-index:999;
+animation:pulse 2s infinite;
+transition:0.3s;
+}
+
+.whatsapp-btn img{
+width:30px;
+}
+
+.whatsapp-btn:hover{
+transform:scale(1.1);
+}
+
+@keyframes pulse{
+0%{ box-shadow:0 0 0 0 rgba(37,211,102,0.7); }
+70%{ box-shadow:0 0 0 15px rgba(37,211,102,0); }
+100%{ box-shadow:0 0 0 0 rgba(37,211,102,0); }
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
+<!-- ==== CAMBIAR LOGO AQUÍ ==== -->
 <img src="images/logo.png">
+
 <nav>
 <a href="#nosotros">Nosotros</a>
 <a href="servicios.html">Servicios</a>
@@ -192,27 +227,38 @@ text-align:center;
 </nav>
 </header>
 
+<!-- ================= HERO ================= -->
 <section class="hero">
 <div class="hero-content">
+
 <h1>Soluciones Avanzadas de Automatización Industrial</h1>
+
 <p>
 Integramos tecnología, ingeniería y precisión para optimizar procesos productivos en la industria mexicana.
 </p>
+
 <a href="servicios.html" class="btn">Explorar Servicios</a>
+
 </div>
 </section>
 
+<!-- ================= NOSOTROS ================= -->
 <section id="nosotros">
 <h2 class="section-title">Quiénes Somos</h2>
+
+<!-- ==== CAMBIAR TEXTO DE PRESENTACIÓN AQUÍ ==== -->
 <p style="max-width:800px; line-height:1.8; color:var(--gris);">
 Empresa mexicana fundada en 2019 especializada en diseño mecánico, automatización industrial,
 programación de PLC y robótica industrial.
 </p>
 </section>
 
+<!-- ================= SERVICIOS ================= -->
 <section>
 <h2 class="section-title">Servicios</h2>
+
 <div class="grid">
+
 <div class="card">
 <h3>Automatización Industrial</h3>
 <p>Integración de PLC, HMI y sistemas de control industrial.</p>
@@ -227,11 +273,14 @@ programación de PLC y robótica industrial.
 <h3>Diseño Mecánico</h3>
 <p>Desarrollo de maquinaria especial y modelado 3D.</p>
 </div>
+
 </div>
 </section>
 
+<!-- ================= INDUSTRIAS ================= -->
 <section id="industrias">
 <h2 class="section-title">Industrias Atendidas</h2>
+
 <div class="grid">
 <div class="card">Automotriz</div>
 <div class="card">Farmacéutica</div>
@@ -240,16 +289,22 @@ programación de PLC y robótica industrial.
 </div>
 </section>
 
+<!-- ================= CTA ================= -->
 <section class="cta">
 <h2>Impulsa tu producción con ingeniería de precisión</h2>
 <a href="#contacto">Solicitar Cotización</a>
 </section>
 
-<!-- CONTACTO CON FORMULARIO FUNCIONAL -->
+<!-- ================= CONTACTO ================= -->
 <section id="contacto">
 <h2 class="section-title">Solicitar Cotización</h2>
 
-<form action="https://formspree.io/f/https://formspree.io/f/xkovylzn" method="POST" class="contact-form">
+<!-- =====================
+     FORMULARIO FUNCIONAL
+     NO CAMBIAR METHOD
+     SOLO CAMBIAR EL ENDPOINT SI ES NECESARIO
+===================== -->
+<form action="https://formspree.io/f/xkovylzn" method="POST" class="contact-form">
 
 <input type="text" name="nombre" placeholder="Nombre" required>
 <input type="email" name="email" placeholder="Correo electrónico" required>
@@ -260,6 +315,7 @@ programación de PLC y robótica industrial.
 </form>
 </section>
 
+<!-- ================= FOOTER ================= -->
 <footer>
 <p>Feynman Ingeniería Industrial</p>
 <p>Tlaxcala · Puebla · CDMX</p>
@@ -267,22 +323,12 @@ programación de PLC y robótica industrial.
 <p>© 2026 Todos los derechos reservados</p>
 </footer>
 
-<!-- BOTÓN FLOTANTE WHATSAPP -->
-<a href="https://wa.me/5212461423674"
-style="
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-padding:15px 18px;
-border-radius:50px;
-font-size:20px;
-text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
-z-index:999;
-">
-💬
+<!-- ================= WHATSAPP ================= -->
+<!-- ==== CAMBIAR NÚMERO O MENSAJE AQUÍ SI QUIERES ==== -->
+<a href="https://wa.me/5212481677682?text=Hola,%20me%20interesa%20una%20cotización%20para%20un%20proyecto%20de%20automatización."
+target="_blank"
+class="whatsapp-btn">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
 </body>
